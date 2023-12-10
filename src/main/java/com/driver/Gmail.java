@@ -71,7 +71,7 @@ public class Gmail extends Email {
         int count=0;
         for(Mail mail : inbox){
             Date date = mail.date;
-            if(date.after(start) && date.before(end))
+            if( (date.after(start) || date.equals(start)) && (date.equals(end)||date.before(end)) )
                 count++;
         }
         return count;
@@ -89,7 +89,7 @@ public class Gmail extends Email {
 
     public void emptyTrash(){
         // clear all mails in the trash
-        this.trash = new ArrayList<>();
+        trash.clear();
     }
 
     public int getInboxCapacity() {

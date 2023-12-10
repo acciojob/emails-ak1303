@@ -23,6 +23,7 @@ public class Main {
         System.out.println("The latest message is :" + gmail.findLatestMessage());
         gmail.deleteMail("Assignment to be uploaded on database.");
         System.out.println("There are " + gmail.getTrashSize() + " mails in the trash.");
+        //System.out.println("Total " + gmail.getInboxSize() + " mails in inbox.");
         gmail.emptyTrash();
         System.out.println("There are " + gmail.getTrashSize() + " mails in the trash.");
 

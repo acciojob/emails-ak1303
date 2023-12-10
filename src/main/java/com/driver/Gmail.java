@@ -45,6 +45,7 @@ public class Gmail extends Email {
         for(int i=0;i<inbox.size();i++){
             Mail mail = inbox.get(i);
             if(mail.message.equals(message)){
+                trash.add(inbox.get(i));
                 inbox.remove(i);
                 break;
             }
